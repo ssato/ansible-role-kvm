@@ -23,6 +23,12 @@
       options kvm_intel nested=1
       options kvm_amd nested=1
 
+- include: kvm_iommu.yml
+  when:
+    - enable_iommu is defined
+    - enable_iommu
+    - cpu_vendor == "intel"
+
 # :seealso: http://docs.ansible.com/ansible/modprobe_module.html
 - name: Ensure KVM kernel module is loaded
   shell: "test -c /dev/kvm || modprobe kvm"

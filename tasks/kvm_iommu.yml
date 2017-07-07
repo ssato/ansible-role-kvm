@@ -1,0 +1,22 @@
+- name: Enable IO-MMU
+  replace:
+    path: /etc/default/grub
+    regexp: '^(GRUB_CMDLINE_LINUX=".* rhgb quiet)"$'
+    replace: '\1 intel_iommu=on"'
+
+# TODO:
+- name: Regenerate GRUB2 config (MBR)
+  command: "grub2-mkconfig -o /boot/grub2/grub.cfg"
+  changed_when: false
+  ignore_errors: true
+  when:
+    - regenerate_grub2_cfg
+
+- name: Regenerate GRUB2 config (MBR)
+  command: "grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg"
+  changed_when: false
+  ignore_errors: true
+  when:
+    - regenerate_grub2_cfg
+
+# vim:sw=2:ts=2:et:
