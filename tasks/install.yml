@@ -1,0 +1,8 @@
+---
+- name: Ensure libvirt and related packages installed
+  package:
+    name: "{{ item }}"
+    state: installed
+  with_items: "{{ kvm_packages }}"
+
+# vim:sw=2:ts=2:et:

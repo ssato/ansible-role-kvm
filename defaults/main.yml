@@ -1,0 +1,8 @@
+kvm_packages:
+  - libvirt
+  - libvirt-client  # virt-host-validate
+  - libvirt-python
+  - libvirt-daemon-kvm
+  - qemu-kvm
+
+# vim:sw=2:ts=2:et:
