@@ -12,4 +12,4 @@ before_script:
   - ansible --version
 
 script:
-  - ansible-playbook --syntax-check tests/test.yml -i tests/inventory
+  - ansible-playbook -vvv --syntax-check tests/test.yml -i tests/inventory
