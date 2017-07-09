@@ -6,7 +6,7 @@ ssato.kvm_host
 - Install KVM related packages if not there
 - Ensure KVM kernel modules are loaded with Nested KVM feature is enabled if the hardware supports it.
 
-[![Build Status](https://travis-ci.org/ssato/ansible-role-kvm.svg?branch=master)](https://travis-ci.org/ssato/ansible-role-kvm)
+[![Build Status](https://travis-ci.org/ssato/ansible-role-kvm_host.svg?branch=master)](https://travis-ci.org/ssato/ansible-role-kvm_host)
 
 
 Requirements
