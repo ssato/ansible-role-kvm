@@ -9,7 +9,7 @@
 
 - assert:
     that:
-      - is_kvm_supported|failed
+      - is_kvm_supported|succeeded
     msg: "KVM support is disabled or N/A on this hardware. Check it's configuration first!"
 
 - name: Set virt related facts
