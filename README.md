@@ -1,5 +1,5 @@
-Role Name
-==========
+ssato.kvm_host
+=================
 
 *ssato.kvm_host* is an ansible role to setup KVM host, just does a few things actually.
 
