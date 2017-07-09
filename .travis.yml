@@ -12,4 +12,4 @@ before_script:
   - ansible --version
 
 script:
-  - ansible-playbook --syntax-check ./tests/test.yml -i ./tests/hosts
+  - "cd tests && ansible-playbook --syntax-check test.yml -i inventory"
