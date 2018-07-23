@@ -30,7 +30,7 @@ passed in as parameters) is always nice for users too:
 ```yml
 - hosts: kvm_hosts
   roles:
-     - role: ssato.kvm_host
+     - ssato.kvm_host
 ```
 
 License
